@@ -48,9 +48,14 @@
             // FoodsGP
             // 
             this.FoodsGP.AutoSize = true;
-            this.FoodsGP.Location = new System.Drawing.Point(12, 122);
+            this.FoodsGP.BackColor = System.Drawing.Color.Black;
+            this.FoodsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FoodsGP.ForeColor = System.Drawing.Color.Red;
+            this.FoodsGP.Location = new System.Drawing.Point(16, 150);
+            this.FoodsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FoodsGP.Name = "FoodsGP";
-            this.FoodsGP.Size = new System.Drawing.Size(522, 33);
+            this.FoodsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FoodsGP.Size = new System.Drawing.Size(696, 41);
             this.FoodsGP.TabIndex = 293;
             this.FoodsGP.TabStop = false;
             this.FoodsGP.Text = "Foods";
@@ -58,9 +63,14 @@
             // PotionsGP
             // 
             this.PotionsGP.AutoSize = true;
-            this.PotionsGP.Location = new System.Drawing.Point(12, 12);
+            this.PotionsGP.BackColor = System.Drawing.Color.Black;
+            this.PotionsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PotionsGP.ForeColor = System.Drawing.Color.Red;
+            this.PotionsGP.Location = new System.Drawing.Point(16, 15);
+            this.PotionsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PotionsGP.Name = "PotionsGP";
-            this.PotionsGP.Size = new System.Drawing.Size(522, 29);
+            this.PotionsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PotionsGP.Size = new System.Drawing.Size(696, 36);
             this.PotionsGP.TabIndex = 294;
             this.PotionsGP.TabStop = false;
             this.PotionsGP.Text = "Potions";
@@ -68,9 +78,14 @@
             // BoxesGP
             // 
             this.BoxesGP.AutoSize = true;
-            this.BoxesGP.Location = new System.Drawing.Point(12, 85);
+            this.BoxesGP.BackColor = System.Drawing.Color.Black;
+            this.BoxesGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxesGP.ForeColor = System.Drawing.Color.Red;
+            this.BoxesGP.Location = new System.Drawing.Point(16, 105);
+            this.BoxesGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BoxesGP.Name = "BoxesGP";
-            this.BoxesGP.Size = new System.Drawing.Size(522, 31);
+            this.BoxesGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BoxesGP.Size = new System.Drawing.Size(696, 38);
             this.BoxesGP.TabIndex = 295;
             this.BoxesGP.TabStop = false;
             this.BoxesGP.Text = "Boxes / Speed / Status";
@@ -78,9 +93,14 @@
             // ElementalsGP
             // 
             this.ElementalsGP.AutoSize = true;
-            this.ElementalsGP.Location = new System.Drawing.Point(12, 47);
+            this.ElementalsGP.BackColor = System.Drawing.Color.Black;
+            this.ElementalsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ElementalsGP.ForeColor = System.Drawing.Color.Red;
+            this.ElementalsGP.Location = new System.Drawing.Point(16, 58);
+            this.ElementalsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ElementalsGP.Name = "ElementalsGP";
-            this.ElementalsGP.Size = new System.Drawing.Size(522, 32);
+            this.ElementalsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ElementalsGP.Size = new System.Drawing.Size(696, 39);
             this.ElementalsGP.TabIndex = 296;
             this.ElementalsGP.TabStop = false;
             this.ElementalsGP.Text = "Elementals";
@@ -88,9 +108,14 @@
             // ScrollBuffsGP
             // 
             this.ScrollBuffsGP.AutoSize = true;
-            this.ScrollBuffsGP.Location = new System.Drawing.Point(12, 161);
+            this.ScrollBuffsGP.BackColor = System.Drawing.Color.Black;
+            this.ScrollBuffsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScrollBuffsGP.ForeColor = System.Drawing.Color.Red;
+            this.ScrollBuffsGP.Location = new System.Drawing.Point(16, 198);
+            this.ScrollBuffsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ScrollBuffsGP.Name = "ScrollBuffsGP";
-            this.ScrollBuffsGP.Size = new System.Drawing.Size(522, 33);
+            this.ScrollBuffsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ScrollBuffsGP.Size = new System.Drawing.Size(696, 41);
             this.ScrollBuffsGP.TabIndex = 297;
             this.ScrollBuffsGP.TabStop = false;
             this.ScrollBuffsGP.Text = "Scroll Buffs";
@@ -98,21 +123,25 @@
             // EtcGP
             // 
             this.EtcGP.AutoSize = true;
-            this.EtcGP.Location = new System.Drawing.Point(12, 200);
+            this.EtcGP.BackColor = System.Drawing.Color.Black;
+            this.EtcGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EtcGP.ForeColor = System.Drawing.Color.Red;
+            this.EtcGP.Location = new System.Drawing.Point(16, 246);
+            this.EtcGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EtcGP.Name = "EtcGP";
-            this.EtcGP.Size = new System.Drawing.Size(522, 33);
+            this.EtcGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EtcGP.Size = new System.Drawing.Size(696, 41);
             this.EtcGP.TabIndex = 298;
             this.EtcGP.TabStop = false;
             this.EtcGP.Text = "ETC";
-           
             // 
             // StuffAutoBuffForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(563, 248);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(751, 305);
             this.Controls.Add(this.EtcGP);
             this.Controls.Add(this.ScrollBuffsGP);
             this.Controls.Add(this.ElementalsGP);
@@ -120,6 +149,7 @@
             this.Controls.Add(this.PotionsGP);
             this.Controls.Add(this.FoodsGP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StuffAutoBuffForm";
             this.Text = "AutobuffSkillForm";
             this.ResumeLayout(false);

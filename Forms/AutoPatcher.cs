@@ -70,7 +70,7 @@ namespace _4RTools.Forms
             }
             catch(Exception ex)
             {
-                MessageBox.Show("We could not update 4RTools. You are using an outdated version.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("We could not update 4RTools. You are using an outdated version.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             finally
             {

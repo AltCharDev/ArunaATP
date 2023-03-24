@@ -58,9 +58,13 @@
             // ArcherSkillsGP
             // 
             this.ArcherSkillsGP.AutoSize = true;
-            this.ArcherSkillsGP.Location = new System.Drawing.Point(12, 12);
+            this.ArcherSkillsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ArcherSkillsGP.ForeColor = System.Drawing.Color.Red;
+            this.ArcherSkillsGP.Location = new System.Drawing.Point(16, 15);
+            this.ArcherSkillsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ArcherSkillsGP.Name = "ArcherSkillsGP";
-            this.ArcherSkillsGP.Size = new System.Drawing.Size(505, 30);
+            this.ArcherSkillsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ArcherSkillsGP.Size = new System.Drawing.Size(673, 37);
             this.ArcherSkillsGP.TabIndex = 200;
             this.ArcherSkillsGP.TabStop = false;
             this.ArcherSkillsGP.Text = "Archer Skills";
@@ -68,9 +72,13 @@
             // SwordmanSkillGP
             // 
             this.SwordmanSkillGP.AutoSize = true;
-            this.SwordmanSkillGP.Location = new System.Drawing.Point(12, 48);
+            this.SwordmanSkillGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SwordmanSkillGP.ForeColor = System.Drawing.Color.Red;
+            this.SwordmanSkillGP.Location = new System.Drawing.Point(16, 59);
+            this.SwordmanSkillGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SwordmanSkillGP.Name = "SwordmanSkillGP";
-            this.SwordmanSkillGP.Size = new System.Drawing.Size(505, 32);
+            this.SwordmanSkillGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SwordmanSkillGP.Size = new System.Drawing.Size(673, 39);
             this.SwordmanSkillGP.TabIndex = 201;
             this.SwordmanSkillGP.TabStop = false;
             this.SwordmanSkillGP.Text = "Swordsman Skills";
@@ -78,9 +86,13 @@
             // MageSkillGP
             // 
             this.MageSkillGP.AutoSize = true;
-            this.MageSkillGP.Location = new System.Drawing.Point(12, 86);
+            this.MageSkillGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MageSkillGP.ForeColor = System.Drawing.Color.Red;
+            this.MageSkillGP.Location = new System.Drawing.Point(16, 106);
+            this.MageSkillGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MageSkillGP.Name = "MageSkillGP";
-            this.MageSkillGP.Size = new System.Drawing.Size(505, 35);
+            this.MageSkillGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MageSkillGP.Size = new System.Drawing.Size(673, 43);
             this.MageSkillGP.TabIndex = 202;
             this.MageSkillGP.TabStop = false;
             this.MageSkillGP.Text = "Mage Skills";
@@ -88,9 +100,13 @@
             // MerchantSkillsGP
             // 
             this.MerchantSkillsGP.AutoSize = true;
-            this.MerchantSkillsGP.Location = new System.Drawing.Point(12, 127);
+            this.MerchantSkillsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MerchantSkillsGP.ForeColor = System.Drawing.Color.Red;
+            this.MerchantSkillsGP.Location = new System.Drawing.Point(16, 156);
+            this.MerchantSkillsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MerchantSkillsGP.Name = "MerchantSkillsGP";
-            this.MerchantSkillsGP.Size = new System.Drawing.Size(505, 35);
+            this.MerchantSkillsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MerchantSkillsGP.Size = new System.Drawing.Size(673, 43);
             this.MerchantSkillsGP.TabIndex = 203;
             this.MerchantSkillsGP.TabStop = false;
             this.MerchantSkillsGP.Text = "Merchant Skills";
@@ -98,9 +114,13 @@
             // ThiefSkillsGP
             // 
             this.ThiefSkillsGP.AutoSize = true;
-            this.ThiefSkillsGP.Location = new System.Drawing.Point(12, 168);
+            this.ThiefSkillsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThiefSkillsGP.ForeColor = System.Drawing.Color.Red;
+            this.ThiefSkillsGP.Location = new System.Drawing.Point(16, 207);
+            this.ThiefSkillsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ThiefSkillsGP.Name = "ThiefSkillsGP";
-            this.ThiefSkillsGP.Size = new System.Drawing.Size(505, 35);
+            this.ThiefSkillsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ThiefSkillsGP.Size = new System.Drawing.Size(673, 43);
             this.ThiefSkillsGP.TabIndex = 204;
             this.ThiefSkillsGP.TabStop = false;
             this.ThiefSkillsGP.Text = "Thief Skills";
@@ -108,9 +128,13 @@
             // AcolyteSkillsGP
             // 
             this.AcolyteSkillsGP.AutoSize = true;
-            this.AcolyteSkillsGP.Location = new System.Drawing.Point(12, 213);
+            this.AcolyteSkillsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcolyteSkillsGP.ForeColor = System.Drawing.Color.Red;
+            this.AcolyteSkillsGP.Location = new System.Drawing.Point(16, 262);
+            this.AcolyteSkillsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AcolyteSkillsGP.Name = "AcolyteSkillsGP";
-            this.AcolyteSkillsGP.Size = new System.Drawing.Size(505, 35);
+            this.AcolyteSkillsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AcolyteSkillsGP.Size = new System.Drawing.Size(673, 43);
             this.AcolyteSkillsGP.TabIndex = 205;
             this.AcolyteSkillsGP.TabStop = false;
             this.AcolyteSkillsGP.Text = "Acolyte Skills";
@@ -118,9 +142,13 @@
             // TKSkillGroupBox
             // 
             this.TKSkillGroupBox.AutoSize = true;
-            this.TKSkillGroupBox.Location = new System.Drawing.Point(12, 254);
+            this.TKSkillGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TKSkillGroupBox.ForeColor = System.Drawing.Color.Red;
+            this.TKSkillGroupBox.Location = new System.Drawing.Point(16, 313);
+            this.TKSkillGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TKSkillGroupBox.Name = "TKSkillGroupBox";
-            this.TKSkillGroupBox.Size = new System.Drawing.Size(505, 35);
+            this.TKSkillGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TKSkillGroupBox.Size = new System.Drawing.Size(673, 43);
             this.TKSkillGroupBox.TabIndex = 206;
             this.TKSkillGroupBox.TabStop = false;
             this.TKSkillGroupBox.Text = "Taekwon Skills";
@@ -128,9 +156,13 @@
             // NinjaSkillsGP
             // 
             this.NinjaSkillsGP.AutoSize = true;
-            this.NinjaSkillsGP.Location = new System.Drawing.Point(12, 295);
+            this.NinjaSkillsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NinjaSkillsGP.ForeColor = System.Drawing.Color.Red;
+            this.NinjaSkillsGP.Location = new System.Drawing.Point(16, 363);
+            this.NinjaSkillsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NinjaSkillsGP.Name = "NinjaSkillsGP";
-            this.NinjaSkillsGP.Size = new System.Drawing.Size(505, 35);
+            this.NinjaSkillsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NinjaSkillsGP.Size = new System.Drawing.Size(673, 43);
             this.NinjaSkillsGP.TabIndex = 207;
             this.NinjaSkillsGP.TabStop = false;
             this.NinjaSkillsGP.Text = "Ninja Skills";
@@ -138,20 +170,24 @@
             // GunsSkillsGP
             // 
             this.GunsSkillsGP.AutoSize = true;
-            this.GunsSkillsGP.Location = new System.Drawing.Point(12, 336);
+            this.GunsSkillsGP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GunsSkillsGP.ForeColor = System.Drawing.Color.Red;
+            this.GunsSkillsGP.Location = new System.Drawing.Point(16, 414);
+            this.GunsSkillsGP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GunsSkillsGP.Name = "GunsSkillsGP";
-            this.GunsSkillsGP.Size = new System.Drawing.Size(505, 35);
+            this.GunsSkillsGP.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GunsSkillsGP.Size = new System.Drawing.Size(673, 43);
             this.GunsSkillsGP.TabIndex = 208;
             this.GunsSkillsGP.TabStop = false;
             this.GunsSkillsGP.Text = "Gunslinger Skills";
             // 
             // SkillAutoBuffForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(563, 388);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(751, 478);
             this.Controls.Add(this.GunsSkillsGP);
             this.Controls.Add(this.NinjaSkillsGP);
             this.Controls.Add(this.TKSkillGroupBox);
@@ -162,6 +198,7 @@
             this.Controls.Add(this.ArcherSkillsGP);
             this.Controls.Add(this.SwordmanSkillGP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SkillAutoBuffForm";
             this.Text = "SkilAutoBuffForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();

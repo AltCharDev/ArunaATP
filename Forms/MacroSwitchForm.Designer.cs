@@ -188,15 +188,17 @@
             // 
             // in1mac1
             // 
-            this.in1mac1.Location = new System.Drawing.Point(63, 34);
+            this.in1mac1.Location = new System.Drawing.Point(84, 42);
+            this.in1mac1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in1mac1.Name = "in1mac1";
-            this.in1mac1.Size = new System.Drawing.Size(49, 20);
+            this.in1mac1.Size = new System.Drawing.Size(64, 22);
             this.in1mac1.TabIndex = 182;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(82, 54);
+            this.pictureBox2.Location = new System.Drawing.Point(109, 66);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(11, 14);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -205,8 +207,9 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox3.Location = new System.Drawing.Point(112, 38);
+            this.pictureBox3.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox3.Location = new System.Drawing.Point(149, 47);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(21, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -215,55 +218,61 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 38);
+            this.label5.Location = new System.Drawing.Point(36, 47);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 222;
             this.label5.Text = "Keys:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 72);
+            this.label4.Location = new System.Drawing.Point(4, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(90, 16);
             this.label4.TabIndex = 248;
             this.label4.Text = "Delays(ms):";
             // 
             // in1mac1delay
             // 
-            this.in1mac1delay.Location = new System.Drawing.Point(65, 68);
+            this.in1mac1delay.Location = new System.Drawing.Point(87, 84);
+            this.in1mac1delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in1mac1delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in1mac1delay.Name = "in1mac1delay";
-            this.in1mac1delay.Size = new System.Drawing.Size(47, 20);
+            this.in1mac1delay.Size = new System.Drawing.Size(63, 22);
             this.in1mac1delay.TabIndex = 254;
             // 
             // in2mac1delay
             // 
-            this.in2mac1delay.Location = new System.Drawing.Point(134, 68);
+            this.in2mac1delay.Location = new System.Drawing.Point(179, 84);
+            this.in2mac1delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in2mac1delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in2mac1delay.Name = "in2mac1delay";
-            this.in2mac1delay.Size = new System.Drawing.Size(47, 20);
+            this.in2mac1delay.Size = new System.Drawing.Size(63, 22);
             this.in2mac1delay.TabIndex = 260;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox4.Location = new System.Drawing.Point(181, 38);
+            this.pictureBox4.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox4.Location = new System.Drawing.Point(241, 47);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(21, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -273,7 +282,8 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(151, 54);
+            this.pictureBox5.Location = new System.Drawing.Point(201, 66);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(11, 14);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -282,27 +292,30 @@
             // 
             // in2mac1
             // 
-            this.in2mac1.Location = new System.Drawing.Point(132, 34);
+            this.in2mac1.Location = new System.Drawing.Point(176, 42);
+            this.in2mac1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in2mac1.Name = "in2mac1";
-            this.in2mac1.Size = new System.Drawing.Size(49, 20);
+            this.in2mac1.Size = new System.Drawing.Size(64, 22);
             this.in2mac1.TabIndex = 257;
             // 
             // in4mac1delay
             // 
-            this.in4mac1delay.Location = new System.Drawing.Point(272, 68);
+            this.in4mac1delay.Location = new System.Drawing.Point(363, 84);
+            this.in4mac1delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in4mac1delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in4mac1delay.Name = "in4mac1delay";
-            this.in4mac1delay.Size = new System.Drawing.Size(47, 20);
+            this.in4mac1delay.Size = new System.Drawing.Size(63, 22);
             this.in4mac1delay.TabIndex = 268;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox6.Location = new System.Drawing.Point(319, 38);
+            this.pictureBox6.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox6.Location = new System.Drawing.Point(425, 47);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(21, 41);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -312,7 +325,8 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(289, 54);
+            this.pictureBox7.Location = new System.Drawing.Point(385, 66);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(11, 14);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -321,27 +335,30 @@
             // 
             // in4mac1
             // 
-            this.in4mac1.Location = new System.Drawing.Point(270, 34);
+            this.in4mac1.Location = new System.Drawing.Point(360, 42);
+            this.in4mac1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in4mac1.Name = "in4mac1";
-            this.in4mac1.Size = new System.Drawing.Size(49, 20);
+            this.in4mac1.Size = new System.Drawing.Size(64, 22);
             this.in4mac1.TabIndex = 265;
             // 
             // in3mac1delay
             // 
-            this.in3mac1delay.Location = new System.Drawing.Point(203, 68);
+            this.in3mac1delay.Location = new System.Drawing.Point(271, 84);
+            this.in3mac1delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in3mac1delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in3mac1delay.Name = "in3mac1delay";
-            this.in3mac1delay.Size = new System.Drawing.Size(47, 20);
+            this.in3mac1delay.Size = new System.Drawing.Size(63, 22);
             this.in3mac1delay.TabIndex = 264;
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox8.Location = new System.Drawing.Point(250, 38);
+            this.pictureBox8.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox8.Location = new System.Drawing.Point(333, 47);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(21, 41);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -351,7 +368,8 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(220, 54);
+            this.pictureBox9.Location = new System.Drawing.Point(293, 66);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(11, 14);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -360,27 +378,30 @@
             // 
             // in3mac1
             // 
-            this.in3mac1.Location = new System.Drawing.Point(201, 34);
+            this.in3mac1.Location = new System.Drawing.Point(268, 42);
+            this.in3mac1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in3mac1.Name = "in3mac1";
-            this.in3mac1.Size = new System.Drawing.Size(49, 20);
+            this.in3mac1.Size = new System.Drawing.Size(64, 22);
             this.in3mac1.TabIndex = 261;
             // 
             // in7mac1delay
             // 
-            this.in7mac1delay.Location = new System.Drawing.Point(479, 68);
+            this.in7mac1delay.Location = new System.Drawing.Point(639, 84);
+            this.in7mac1delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in7mac1delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in7mac1delay.Name = "in7mac1delay";
-            this.in7mac1delay.Size = new System.Drawing.Size(47, 20);
+            this.in7mac1delay.Size = new System.Drawing.Size(63, 22);
             this.in7mac1delay.TabIndex = 280;
             // 
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(496, 54);
+            this.pictureBox11.Location = new System.Drawing.Point(661, 66);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(11, 14);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -389,27 +410,30 @@
             // 
             // in7mac1
             // 
-            this.in7mac1.Location = new System.Drawing.Point(477, 34);
+            this.in7mac1.Location = new System.Drawing.Point(636, 42);
+            this.in7mac1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in7mac1.Name = "in7mac1";
-            this.in7mac1.Size = new System.Drawing.Size(49, 20);
+            this.in7mac1.Size = new System.Drawing.Size(64, 22);
             this.in7mac1.TabIndex = 277;
             // 
             // in6mac1delay
             // 
-            this.in6mac1delay.Location = new System.Drawing.Point(410, 68);
+            this.in6mac1delay.Location = new System.Drawing.Point(547, 84);
+            this.in6mac1delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in6mac1delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in6mac1delay.Name = "in6mac1delay";
-            this.in6mac1delay.Size = new System.Drawing.Size(47, 20);
+            this.in6mac1delay.Size = new System.Drawing.Size(63, 22);
             this.in6mac1delay.TabIndex = 276;
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox12.Location = new System.Drawing.Point(457, 38);
+            this.pictureBox12.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox12.Location = new System.Drawing.Point(609, 47);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(21, 41);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -419,7 +443,8 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(427, 54);
+            this.pictureBox13.Location = new System.Drawing.Point(569, 66);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(11, 14);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -428,27 +453,30 @@
             // 
             // in6mac1
             // 
-            this.in6mac1.Location = new System.Drawing.Point(408, 34);
+            this.in6mac1.Location = new System.Drawing.Point(544, 42);
+            this.in6mac1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in6mac1.Name = "in6mac1";
-            this.in6mac1.Size = new System.Drawing.Size(49, 20);
+            this.in6mac1.Size = new System.Drawing.Size(64, 22);
             this.in6mac1.TabIndex = 273;
             // 
             // in5mac1delay
             // 
-            this.in5mac1delay.Location = new System.Drawing.Point(341, 68);
+            this.in5mac1delay.Location = new System.Drawing.Point(455, 84);
+            this.in5mac1delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in5mac1delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in5mac1delay.Name = "in5mac1delay";
-            this.in5mac1delay.Size = new System.Drawing.Size(47, 20);
+            this.in5mac1delay.Size = new System.Drawing.Size(63, 22);
             this.in5mac1delay.TabIndex = 272;
             // 
             // pictureBox14
             // 
-            this.pictureBox14.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox14.Location = new System.Drawing.Point(388, 38);
+            this.pictureBox14.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox14.Location = new System.Drawing.Point(517, 47);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(21, 41);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -458,7 +486,8 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(358, 54);
+            this.pictureBox15.Location = new System.Drawing.Point(477, 66);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(11, 14);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -467,13 +496,15 @@
             // 
             // in5mac1
             // 
-            this.in5mac1.Location = new System.Drawing.Point(339, 34);
+            this.in5mac1.Location = new System.Drawing.Point(452, 42);
+            this.in5mac1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in5mac1.Name = "in5mac1";
-            this.in5mac1.Size = new System.Drawing.Size(49, 20);
+            this.in5mac1.Size = new System.Drawing.Size(64, 22);
             this.in5mac1.TabIndex = 269;
             // 
             // chainGroup1
             // 
+            this.chainGroup1.BackColor = System.Drawing.Color.Black;
             this.chainGroup1.Controls.Add(this.in1mac1);
             this.chainGroup1.Controls.Add(this.in7mac1);
             this.chainGroup1.Controls.Add(this.in6mac1);
@@ -503,15 +534,20 @@
             this.chainGroup1.Controls.Add(this.pictureBox6);
             this.chainGroup1.Controls.Add(this.pictureBox14);
             this.chainGroup1.Controls.Add(this.pictureBox12);
-            this.chainGroup1.Location = new System.Drawing.Point(1, 12);
+            this.chainGroup1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chainGroup1.ForeColor = System.Drawing.Color.Red;
+            this.chainGroup1.Location = new System.Drawing.Point(1, 15);
+            this.chainGroup1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chainGroup1.Name = "chainGroup1";
-            this.chainGroup1.Size = new System.Drawing.Size(533, 118);
+            this.chainGroup1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chainGroup1.Size = new System.Drawing.Size(711, 145);
             this.chainGroup1.TabIndex = 281;
             this.chainGroup1.TabStop = false;
             this.chainGroup1.Text = "Switch 1";
             // 
             // chainGroup2
             // 
+            this.chainGroup2.BackColor = System.Drawing.Color.Black;
             this.chainGroup2.Controls.Add(this.in1mac2);
             this.chainGroup2.Controls.Add(this.in7mac2);
             this.chainGroup2.Controls.Add(this.in6mac2);
@@ -541,78 +577,91 @@
             this.chainGroup2.Controls.Add(this.pictureBox24);
             this.chainGroup2.Controls.Add(this.pictureBox25);
             this.chainGroup2.Controls.Add(this.pictureBox26);
-            this.chainGroup2.Location = new System.Drawing.Point(1, 145);
+            this.chainGroup2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chainGroup2.ForeColor = System.Drawing.Color.Red;
+            this.chainGroup2.Location = new System.Drawing.Point(1, 178);
+            this.chainGroup2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chainGroup2.Name = "chainGroup2";
-            this.chainGroup2.Size = new System.Drawing.Size(533, 118);
+            this.chainGroup2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chainGroup2.Size = new System.Drawing.Size(711, 145);
             this.chainGroup2.TabIndex = 282;
             this.chainGroup2.TabStop = false;
             this.chainGroup2.Text = "Switch 2";
             // 
             // in1mac2
             // 
-            this.in1mac2.Location = new System.Drawing.Point(63, 34);
+            this.in1mac2.Location = new System.Drawing.Point(84, 42);
+            this.in1mac2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in1mac2.Name = "in1mac2";
-            this.in1mac2.Size = new System.Drawing.Size(49, 20);
+            this.in1mac2.Size = new System.Drawing.Size(64, 22);
             this.in1mac2.TabIndex = 182;
             // 
             // in7mac2
             // 
-            this.in7mac2.Location = new System.Drawing.Point(477, 34);
+            this.in7mac2.Location = new System.Drawing.Point(636, 42);
+            this.in7mac2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in7mac2.Name = "in7mac2";
-            this.in7mac2.Size = new System.Drawing.Size(49, 20);
+            this.in7mac2.Size = new System.Drawing.Size(64, 22);
             this.in7mac2.TabIndex = 277;
             // 
             // in6mac2
             // 
-            this.in6mac2.Location = new System.Drawing.Point(408, 34);
+            this.in6mac2.Location = new System.Drawing.Point(544, 42);
+            this.in6mac2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in6mac2.Name = "in6mac2";
-            this.in6mac2.Size = new System.Drawing.Size(49, 20);
+            this.in6mac2.Size = new System.Drawing.Size(64, 22);
             this.in6mac2.TabIndex = 273;
             // 
             // in2mac2
             // 
-            this.in2mac2.Location = new System.Drawing.Point(132, 34);
+            this.in2mac2.Location = new System.Drawing.Point(176, 42);
+            this.in2mac2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in2mac2.Name = "in2mac2";
-            this.in2mac2.Size = new System.Drawing.Size(49, 20);
+            this.in2mac2.Size = new System.Drawing.Size(64, 22);
             this.in2mac2.TabIndex = 257;
             // 
             // in5mac2
             // 
-            this.in5mac2.Location = new System.Drawing.Point(339, 34);
+            this.in5mac2.Location = new System.Drawing.Point(452, 42);
+            this.in5mac2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in5mac2.Name = "in5mac2";
-            this.in5mac2.Size = new System.Drawing.Size(49, 20);
+            this.in5mac2.Size = new System.Drawing.Size(64, 22);
             this.in5mac2.TabIndex = 269;
             // 
             // in3mac2
             // 
-            this.in3mac2.Location = new System.Drawing.Point(201, 34);
+            this.in3mac2.Location = new System.Drawing.Point(268, 42);
+            this.in3mac2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in3mac2.Name = "in3mac2";
-            this.in3mac2.Size = new System.Drawing.Size(49, 20);
+            this.in3mac2.Size = new System.Drawing.Size(64, 22);
             this.in3mac2.TabIndex = 261;
             // 
             // in4mac2
             // 
-            this.in4mac2.Location = new System.Drawing.Point(270, 34);
+            this.in4mac2.Location = new System.Drawing.Point(360, 42);
+            this.in4mac2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in4mac2.Name = "in4mac2";
-            this.in4mac2.Size = new System.Drawing.Size(49, 20);
+            this.in4mac2.Size = new System.Drawing.Size(64, 22);
             this.in4mac2.TabIndex = 265;
             // 
             // in7mac2delay
             // 
-            this.in7mac2delay.Location = new System.Drawing.Point(479, 68);
+            this.in7mac2delay.Location = new System.Drawing.Point(639, 84);
+            this.in7mac2delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in7mac2delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in7mac2delay.Name = "in7mac2delay";
-            this.in7mac2delay.Size = new System.Drawing.Size(47, 20);
+            this.in7mac2delay.Size = new System.Drawing.Size(63, 22);
             this.in7mac2delay.TabIndex = 280;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(496, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(661, 66);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(11, 14);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -622,7 +671,8 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(82, 54);
+            this.pictureBox10.Location = new System.Drawing.Point(109, 66);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(11, 14);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -631,38 +681,42 @@
             // 
             // in6mac2delay
             // 
-            this.in6mac2delay.Location = new System.Drawing.Point(410, 68);
+            this.in6mac2delay.Location = new System.Drawing.Point(547, 84);
+            this.in6mac2delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in6mac2delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in6mac2delay.Name = "in6mac2delay";
-            this.in6mac2delay.Size = new System.Drawing.Size(47, 20);
+            this.in6mac2delay.Size = new System.Drawing.Size(63, 22);
             this.in6mac2delay.TabIndex = 276;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 72);
+            this.label1.Location = new System.Drawing.Point(4, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 248;
             this.label1.Text = "Delays(ms):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 38);
+            this.label2.Location = new System.Drawing.Point(36, 47);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 222;
             this.label2.Text = "Keys:";
             // 
             // pictureBox16
             // 
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(427, 54);
+            this.pictureBox16.Location = new System.Drawing.Point(569, 66);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(11, 14);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -671,32 +725,35 @@
             // 
             // in1mac2delay
             // 
-            this.in1mac2delay.Location = new System.Drawing.Point(65, 68);
+            this.in1mac2delay.Location = new System.Drawing.Point(87, 84);
+            this.in1mac2delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in1mac2delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in1mac2delay.Name = "in1mac2delay";
-            this.in1mac2delay.Size = new System.Drawing.Size(47, 20);
+            this.in1mac2delay.Size = new System.Drawing.Size(63, 22);
             this.in1mac2delay.TabIndex = 254;
             // 
             // in5mac2delay
             // 
-            this.in5mac2delay.Location = new System.Drawing.Point(341, 68);
+            this.in5mac2delay.Location = new System.Drawing.Point(455, 84);
+            this.in5mac2delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in5mac2delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in5mac2delay.Name = "in5mac2delay";
-            this.in5mac2delay.Size = new System.Drawing.Size(47, 20);
+            this.in5mac2delay.Size = new System.Drawing.Size(63, 22);
             this.in5mac2delay.TabIndex = 272;
             // 
             // pictureBox17
             // 
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(151, 54);
+            this.pictureBox17.Location = new System.Drawing.Point(201, 66);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(11, 14);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -706,7 +763,8 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(358, 54);
+            this.pictureBox18.Location = new System.Drawing.Point(477, 66);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(11, 14);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -715,32 +773,35 @@
             // 
             // in2mac2delay
             // 
-            this.in2mac2delay.Location = new System.Drawing.Point(134, 68);
+            this.in2mac2delay.Location = new System.Drawing.Point(179, 84);
+            this.in2mac2delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in2mac2delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in2mac2delay.Name = "in2mac2delay";
-            this.in2mac2delay.Size = new System.Drawing.Size(47, 20);
+            this.in2mac2delay.Size = new System.Drawing.Size(63, 22);
             this.in2mac2delay.TabIndex = 260;
             // 
             // in4mac2delay
             // 
-            this.in4mac2delay.Location = new System.Drawing.Point(272, 68);
+            this.in4mac2delay.Location = new System.Drawing.Point(363, 84);
+            this.in4mac2delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in4mac2delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in4mac2delay.Name = "in4mac2delay";
-            this.in4mac2delay.Size = new System.Drawing.Size(47, 20);
+            this.in4mac2delay.Size = new System.Drawing.Size(63, 22);
             this.in4mac2delay.TabIndex = 268;
             // 
             // pictureBox19
             // 
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(220, 54);
+            this.pictureBox19.Location = new System.Drawing.Point(293, 66);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(11, 14);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -750,7 +811,8 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(289, 54);
+            this.pictureBox20.Location = new System.Drawing.Point(385, 66);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(11, 14);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -759,20 +821,22 @@
             // 
             // in3mac2delay
             // 
-            this.in3mac2delay.Location = new System.Drawing.Point(203, 68);
+            this.in3mac2delay.Location = new System.Drawing.Point(271, 84);
+            this.in3mac2delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in3mac2delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in3mac2delay.Name = "in3mac2delay";
-            this.in3mac2delay.Size = new System.Drawing.Size(47, 20);
+            this.in3mac2delay.Size = new System.Drawing.Size(63, 22);
             this.in3mac2delay.TabIndex = 264;
             // 
             // pictureBox21
             // 
-            this.pictureBox21.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox21.Location = new System.Drawing.Point(112, 38);
+            this.pictureBox21.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox21.Location = new System.Drawing.Point(149, 47);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(21, 41);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -781,8 +845,9 @@
             // 
             // pictureBox22
             // 
-            this.pictureBox22.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox22.Location = new System.Drawing.Point(181, 38);
+            this.pictureBox22.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox22.Location = new System.Drawing.Point(241, 47);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(21, 41);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -791,8 +856,9 @@
             // 
             // pictureBox23
             // 
-            this.pictureBox23.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox23.Location = new System.Drawing.Point(250, 38);
+            this.pictureBox23.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox23.Location = new System.Drawing.Point(333, 47);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(21, 41);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -801,8 +867,9 @@
             // 
             // pictureBox24
             // 
-            this.pictureBox24.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox24.Location = new System.Drawing.Point(319, 38);
+            this.pictureBox24.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox24.Location = new System.Drawing.Point(425, 47);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(21, 41);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -811,8 +878,9 @@
             // 
             // pictureBox25
             // 
-            this.pictureBox25.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox25.Location = new System.Drawing.Point(388, 38);
+            this.pictureBox25.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox25.Location = new System.Drawing.Point(517, 47);
+            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(21, 41);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -821,8 +889,9 @@
             // 
             // pictureBox26
             // 
-            this.pictureBox26.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox26.Location = new System.Drawing.Point(457, 38);
+            this.pictureBox26.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox26.Location = new System.Drawing.Point(609, 47);
+            this.pictureBox26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(21, 41);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -831,6 +900,7 @@
             // 
             // chainGroup3
             // 
+            this.chainGroup3.BackColor = System.Drawing.Color.Black;
             this.chainGroup3.Controls.Add(this.in1mac3);
             this.chainGroup3.Controls.Add(this.in7mac3);
             this.chainGroup3.Controls.Add(this.in6mac3);
@@ -860,78 +930,91 @@
             this.chainGroup3.Controls.Add(this.pictureBox37);
             this.chainGroup3.Controls.Add(this.pictureBox38);
             this.chainGroup3.Controls.Add(this.pictureBox39);
-            this.chainGroup3.Location = new System.Drawing.Point(1, 278);
+            this.chainGroup3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chainGroup3.ForeColor = System.Drawing.Color.Red;
+            this.chainGroup3.Location = new System.Drawing.Point(1, 342);
+            this.chainGroup3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chainGroup3.Name = "chainGroup3";
-            this.chainGroup3.Size = new System.Drawing.Size(533, 118);
+            this.chainGroup3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chainGroup3.Size = new System.Drawing.Size(711, 145);
             this.chainGroup3.TabIndex = 283;
             this.chainGroup3.TabStop = false;
             this.chainGroup3.Text = "Switch 3";
             // 
             // in1mac3
             // 
-            this.in1mac3.Location = new System.Drawing.Point(63, 34);
+            this.in1mac3.Location = new System.Drawing.Point(84, 42);
+            this.in1mac3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in1mac3.Name = "in1mac3";
-            this.in1mac3.Size = new System.Drawing.Size(49, 20);
+            this.in1mac3.Size = new System.Drawing.Size(64, 22);
             this.in1mac3.TabIndex = 182;
             // 
             // in7mac3
             // 
-            this.in7mac3.Location = new System.Drawing.Point(477, 34);
+            this.in7mac3.Location = new System.Drawing.Point(636, 42);
+            this.in7mac3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in7mac3.Name = "in7mac3";
-            this.in7mac3.Size = new System.Drawing.Size(49, 20);
+            this.in7mac3.Size = new System.Drawing.Size(64, 22);
             this.in7mac3.TabIndex = 277;
             // 
             // in6mac3
             // 
-            this.in6mac3.Location = new System.Drawing.Point(408, 34);
+            this.in6mac3.Location = new System.Drawing.Point(544, 42);
+            this.in6mac3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in6mac3.Name = "in6mac3";
-            this.in6mac3.Size = new System.Drawing.Size(49, 20);
+            this.in6mac3.Size = new System.Drawing.Size(64, 22);
             this.in6mac3.TabIndex = 273;
             // 
             // in2mac3
             // 
-            this.in2mac3.Location = new System.Drawing.Point(132, 34);
+            this.in2mac3.Location = new System.Drawing.Point(176, 42);
+            this.in2mac3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in2mac3.Name = "in2mac3";
-            this.in2mac3.Size = new System.Drawing.Size(49, 20);
+            this.in2mac3.Size = new System.Drawing.Size(64, 22);
             this.in2mac3.TabIndex = 257;
             // 
             // in5mac3
             // 
-            this.in5mac3.Location = new System.Drawing.Point(339, 34);
+            this.in5mac3.Location = new System.Drawing.Point(452, 42);
+            this.in5mac3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in5mac3.Name = "in5mac3";
-            this.in5mac3.Size = new System.Drawing.Size(49, 20);
+            this.in5mac3.Size = new System.Drawing.Size(64, 22);
             this.in5mac3.TabIndex = 269;
             // 
             // in3mac3
             // 
-            this.in3mac3.Location = new System.Drawing.Point(201, 34);
+            this.in3mac3.Location = new System.Drawing.Point(268, 42);
+            this.in3mac3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in3mac3.Name = "in3mac3";
-            this.in3mac3.Size = new System.Drawing.Size(49, 20);
+            this.in3mac3.Size = new System.Drawing.Size(64, 22);
             this.in3mac3.TabIndex = 261;
             // 
             // in4mac3
             // 
-            this.in4mac3.Location = new System.Drawing.Point(270, 34);
+            this.in4mac3.Location = new System.Drawing.Point(360, 42);
+            this.in4mac3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in4mac3.Name = "in4mac3";
-            this.in4mac3.Size = new System.Drawing.Size(49, 20);
+            this.in4mac3.Size = new System.Drawing.Size(64, 22);
             this.in4mac3.TabIndex = 265;
             // 
             // in7mac3delay
             // 
-            this.in7mac3delay.Location = new System.Drawing.Point(479, 68);
+            this.in7mac3delay.Location = new System.Drawing.Point(639, 84);
+            this.in7mac3delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in7mac3delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in7mac3delay.Name = "in7mac3delay";
-            this.in7mac3delay.Size = new System.Drawing.Size(47, 20);
+            this.in7mac3delay.Size = new System.Drawing.Size(63, 22);
             this.in7mac3delay.TabIndex = 280;
             // 
             // pictureBox27
             // 
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(496, 54);
+            this.pictureBox27.Location = new System.Drawing.Point(661, 66);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(11, 14);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -941,7 +1024,8 @@
             // pictureBox28
             // 
             this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
-            this.pictureBox28.Location = new System.Drawing.Point(82, 54);
+            this.pictureBox28.Location = new System.Drawing.Point(109, 66);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(11, 14);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -950,38 +1034,42 @@
             // 
             // in6mac3delay
             // 
-            this.in6mac3delay.Location = new System.Drawing.Point(410, 68);
+            this.in6mac3delay.Location = new System.Drawing.Point(547, 84);
+            this.in6mac3delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in6mac3delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in6mac3delay.Name = "in6mac3delay";
-            this.in6mac3delay.Size = new System.Drawing.Size(47, 20);
+            this.in6mac3delay.Size = new System.Drawing.Size(63, 22);
             this.in6mac3delay.TabIndex = 276;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 72);
+            this.label3.Location = new System.Drawing.Point(4, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(90, 16);
             this.label3.TabIndex = 248;
             this.label3.Text = "Delays(ms):";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 38);
+            this.label6.Location = new System.Drawing.Point(36, 47);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.Size = new System.Drawing.Size(45, 16);
             this.label6.TabIndex = 222;
             this.label6.Text = "Keys:";
             // 
             // pictureBox29
             // 
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(427, 54);
+            this.pictureBox29.Location = new System.Drawing.Point(569, 66);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(11, 14);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -990,32 +1078,35 @@
             // 
             // in1mac3delay
             // 
-            this.in1mac3delay.Location = new System.Drawing.Point(65, 68);
+            this.in1mac3delay.Location = new System.Drawing.Point(87, 84);
+            this.in1mac3delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in1mac3delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in1mac3delay.Name = "in1mac3delay";
-            this.in1mac3delay.Size = new System.Drawing.Size(47, 20);
+            this.in1mac3delay.Size = new System.Drawing.Size(63, 22);
             this.in1mac3delay.TabIndex = 254;
             // 
             // in5mac3delay
             // 
-            this.in5mac3delay.Location = new System.Drawing.Point(341, 68);
+            this.in5mac3delay.Location = new System.Drawing.Point(455, 84);
+            this.in5mac3delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in5mac3delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in5mac3delay.Name = "in5mac3delay";
-            this.in5mac3delay.Size = new System.Drawing.Size(47, 20);
+            this.in5mac3delay.Size = new System.Drawing.Size(63, 22);
             this.in5mac3delay.TabIndex = 272;
             // 
             // pictureBox30
             // 
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.Location = new System.Drawing.Point(151, 54);
+            this.pictureBox30.Location = new System.Drawing.Point(201, 66);
+            this.pictureBox30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(11, 14);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1025,7 +1116,8 @@
             // pictureBox31
             // 
             this.pictureBox31.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox31.Image")));
-            this.pictureBox31.Location = new System.Drawing.Point(358, 54);
+            this.pictureBox31.Location = new System.Drawing.Point(477, 66);
+            this.pictureBox31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(11, 14);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1034,32 +1126,35 @@
             // 
             // in2mac3delay
             // 
-            this.in2mac3delay.Location = new System.Drawing.Point(134, 68);
+            this.in2mac3delay.Location = new System.Drawing.Point(179, 84);
+            this.in2mac3delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in2mac3delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in2mac3delay.Name = "in2mac3delay";
-            this.in2mac3delay.Size = new System.Drawing.Size(47, 20);
+            this.in2mac3delay.Size = new System.Drawing.Size(63, 22);
             this.in2mac3delay.TabIndex = 260;
             // 
             // in4mac3delay
             // 
-            this.in4mac3delay.Location = new System.Drawing.Point(272, 68);
+            this.in4mac3delay.Location = new System.Drawing.Point(363, 84);
+            this.in4mac3delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in4mac3delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in4mac3delay.Name = "in4mac3delay";
-            this.in4mac3delay.Size = new System.Drawing.Size(47, 20);
+            this.in4mac3delay.Size = new System.Drawing.Size(63, 22);
             this.in4mac3delay.TabIndex = 268;
             // 
             // pictureBox32
             // 
             this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
-            this.pictureBox32.Location = new System.Drawing.Point(220, 54);
+            this.pictureBox32.Location = new System.Drawing.Point(293, 66);
+            this.pictureBox32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(11, 14);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1069,7 +1164,8 @@
             // pictureBox33
             // 
             this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
-            this.pictureBox33.Location = new System.Drawing.Point(289, 54);
+            this.pictureBox33.Location = new System.Drawing.Point(385, 66);
+            this.pictureBox33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(11, 14);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1078,20 +1174,22 @@
             // 
             // in3mac3delay
             // 
-            this.in3mac3delay.Location = new System.Drawing.Point(203, 68);
+            this.in3mac3delay.Location = new System.Drawing.Point(271, 84);
+            this.in3mac3delay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.in3mac3delay.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.in3mac3delay.Name = "in3mac3delay";
-            this.in3mac3delay.Size = new System.Drawing.Size(47, 20);
+            this.in3mac3delay.Size = new System.Drawing.Size(63, 22);
             this.in3mac3delay.TabIndex = 264;
             // 
             // pictureBox34
             // 
-            this.pictureBox34.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox34.Location = new System.Drawing.Point(112, 38);
+            this.pictureBox34.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox34.Location = new System.Drawing.Point(149, 47);
+            this.pictureBox34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(21, 41);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1100,8 +1198,9 @@
             // 
             // pictureBox35
             // 
-            this.pictureBox35.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox35.Location = new System.Drawing.Point(181, 38);
+            this.pictureBox35.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox35.Location = new System.Drawing.Point(241, 47);
+            this.pictureBox35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(21, 41);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1110,8 +1209,9 @@
             // 
             // pictureBox36
             // 
-            this.pictureBox36.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox36.Location = new System.Drawing.Point(250, 38);
+            this.pictureBox36.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox36.Location = new System.Drawing.Point(333, 47);
+            this.pictureBox36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(21, 41);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1120,8 +1220,9 @@
             // 
             // pictureBox37
             // 
-            this.pictureBox37.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox37.Location = new System.Drawing.Point(319, 38);
+            this.pictureBox37.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox37.Location = new System.Drawing.Point(425, 47);
+            this.pictureBox37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(21, 41);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1130,8 +1231,9 @@
             // 
             // pictureBox38
             // 
-            this.pictureBox38.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox38.Location = new System.Drawing.Point(388, 38);
+            this.pictureBox38.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox38.Location = new System.Drawing.Point(517, 47);
+            this.pictureBox38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(21, 41);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1140,8 +1242,9 @@
             // 
             // pictureBox39
             // 
-            this.pictureBox39.Image = Resources._4RTools.ETCResource.arrowup;
-            this.pictureBox39.Location = new System.Drawing.Point(457, 38);
+            this.pictureBox39.Image = global::_4RTools.Resources._4RTools.ETCResource.arrowup;
+            this.pictureBox39.Location = new System.Drawing.Point(609, 47);
+            this.pictureBox39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(21, 41);
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1150,15 +1253,17 @@
             // 
             // MacroSwitchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(537, 414);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(716, 510);
             this.Controls.Add(this.chainGroup3);
             this.Controls.Add(this.chainGroup2);
             this.Controls.Add(this.chainGroup1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MacroSwitchForm";
             this.Text = "MacroSwitchForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
