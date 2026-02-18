@@ -5,6 +5,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Newtonsoft.Json;
+using _4RTools.Forms;
 
 namespace _4RTools.Model
 {

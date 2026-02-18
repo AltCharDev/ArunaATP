@@ -103,5 +103,15 @@ namespace _4RTools.Forms
             }
             catch (Exception) { }
         }
+
+        private void txtHpKey_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AutopotForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

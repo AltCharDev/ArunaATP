@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using Aspose.Zip.Rar;
 using System.Net;
-using System.Configuration;
 
 namespace _4RTools.Forms
 {
@@ -41,18 +40,18 @@ namespace _4RTools.Forms
             //List[1] = Url
             try
             {
-                String oldFileName = $"{ConfigurationManager.AppSettings["Name"]}_old.exe";
-                String sourceFileName = $"{ConfigurationManager.AppSettings["Name"]}.exe";
+                String oldFileName = "4RTools_old.exe";
+                String sourceFileName = "4RTools.exe";
                 File.Delete(oldFileName); //Delete old 4RTools
                 //Fetch Github latest Tag
                 client.Timeout = TimeSpan.FromSeconds(5);
                 client.DefaultRequestHeaders.Add("User-Agent", "request");
-                string latestVersion = await client.GetStringAsync(ConfigurationManager.AppSettings["4RLatestVersionURL"]);
+                string latestVersion = await client.GetStringAsync(AppConfig._4RLatestVersionURL);
                 JObject obj = JsonConvert.DeserializeObject<JObject>(latestVersion);
 
                 string tag = obj["name"].ToString(); //Tag Name
 
-                if (tag != ConfigurationManager.AppSettings["Version"])
+                if (tag != AppConfig.Version)
                 {
                     string downloadUrl = obj["assets"][0]["browser_download_url"].ToString(); //Latest download url
                     string fileName = obj["assets"][0]["name"].ToString(); //Latest file name
@@ -67,10 +66,6 @@ namespace _4RTools.Forms
                     Environment.Exit(0);
                 }
 
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("We could not update 4RTools. You are using an outdated version.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             finally
             {

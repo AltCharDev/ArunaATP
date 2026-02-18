@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Dynamic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,13 +17,15 @@ namespace _4RTools.Model
 
         private readonly int BUFFS_PER_ROW = 5;
         private readonly int DISTANCE_BETWEEN_CONTAINERS = 10;
-        private readonly int DISTANCE_BETWEEN_ROWS = 30;
+        private readonly int DISTANCE_BETWEEN_ROWS = 50;
 
+        private string _modelName;
         private List<BuffContainer> _containers;
         private ToolTip _toolTip;
 
-        public BuffRenderer(List<BuffContainer> containers, ToolTip toolTip)
+        public BuffRenderer(string model, List<BuffContainer> containers, ToolTip toolTip)
         {
+            this._modelName = model;
             this._containers = containers;
             this._toolTip = toolTip;
         }
@@ -43,13 +47,19 @@ namespace _4RTools.Model
                 foreach (Buff skill in bk.skills)
                 {
                     PictureBox pb = new PictureBox();
+                    Label lb = new Label();
                     TextBox textBox = new TextBox();
 
                     pb.Image = skill.icon;
+                    pb.SizeMode = PictureBoxSizeMode.CenterImage;
                     pb.BackgroundImageLayout = ImageLayout.Center;
-                    pb.Location = new Point(lastLocation.X + (colCount * 100), lastLocation.Y);
+                    pb.Location = new Point(lastLocation.X + (colCount * 100), lastLocation.Y + 15);
                     pb.Name = "pbox" + ((int)skill.effectStatusID);
                     pb.Size = new Size(26, 26);
+                    lb.Location = new Point(lastLocation.X - 40 + (colCount * 100) + 30, lastLocation.Y);
+                    lb.Text = skill.name;
+                    lb.AutoSize = true;
+                    lb.Font = new Font(lb.Font, FontStyle.Italic);
                     _toolTip.SetToolTip(pb, skill.name);
 
                     textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(FormUtils.OnKeyDown);
@@ -62,6 +72,7 @@ namespace _4RTools.Model
 
                     bk.container.Controls.Add(textBox);
                     bk.container.Controls.Add(pb);
+                    bk.container.Controls.Add(lb);
 
                     colCount++;
 
@@ -85,8 +96,18 @@ namespace _4RTools.Model
                 {
                     Key key = (Key)Enum.Parse(typeof(Key), txtBox.Text.ToString());
                     EffectStatusIDs statusID = (EffectStatusIDs)Int16.Parse(txtBox.Name.Split(new[] { "in" }, StringSplitOptions.None)[1]);
-                    ProfileSingleton.GetCurrent().Autobuff.AddKeyToBuff(statusID, key);
-                    ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().Autobuff);
+
+                    switch (this._modelName)
+                    {
+                        case "Autobuff":
+                            ProfileSingleton.GetCurrent().Autobuff.AddKeyToBuff(statusID, key);
+                            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().Autobuff);
+                            break;
+                        case "DebuffsRecovery":
+                            ProfileSingleton.GetCurrent().DebuffsRecovery.AddKeyToBuff(statusID, key);
+                            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().DebuffsRecovery);
+                            break;
+                    }
                 }
             }
             catch { }

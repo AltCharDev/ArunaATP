@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
+using System.Net.Http;
+using System.Net.NetworkInformation;
+using System.Windows.Forms;
 using _4RTools.Model;
 using _4RTools.Utils;
-using System.Configuration;
+using Newtonsoft.Json;
 
 namespace _4RTools.Forms
 {
@@ -13,146 +18,36 @@ namespace _4RTools.Forms
     {
 
         private Subject subject = new Subject();
-        private String currentProfile;
-
+        private string currentProfile;
         public Container()
         {
             this.subject.Attach(this);
 
             InitializeComponent();
-            this.Text = ConfigurationManager.AppSettings["Name"] + " - " + ConfigurationManager.AppSettings["Version"]; // Window title
+            this.Text = AppConfig.Name + " - " + AppConfig.Version; // Window title
 
             //Container Configuration
             this.IsMdiContainer = true;
             SetBackGroundColorOfMDIForm();
 
-            //Paint Children Forms 
+            //Paint Children Forms
             SetToggleApplicationStateWindow();
             SetAutopotWindow();
             SetAutopotYggWindow();
             SetSkillTimerWindow();
-            SetAutoStatusEffectWindow();
-            SetAHKWindow();
             SetProfileWindow();
-            SetAutobuffStuffWindow();
+            SetAHKWindow();
             SetAutobuffSkillWindow();
+            SetAutobuffStuffWindow();
+            SetDebuffRecoveryWindow();
+            SetSkillTimerWindow();
             SetSongMacroWindow();
             SetATKDEFWindow();
             SetMacroSwitchWindow();
-        }
+            SetServerWindow();
+            SetBoxWindow();
 
-        public void SetToggleApplicationStateWindow()
-        {
-            ToggleApplicationStateForm frm = new ToggleApplicationStateForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Location = new Point(350, 70);
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        public void SetAutopotWindow()
-        {
-            AutopotForm frm = new AutopotForm(subject, false);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.MdiParent = this;
-            frm.Show();
-            addform(this.tabPageAutopot, frm);
-        }
-        public void SetAutopotYggWindow()
-        {
-            AutopotForm frm = new AutopotForm(subject, true);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.MdiParent = this;
-            frm.Show();
-            addform(this.tabPageYggAutopot, frm);
-        }
-
-        public void SetSkillTimerWindow()
-        {
-            SkillTimerForm frm = new SkillTimerForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.MdiParent = this;
-            frm.Show();
-            addform(this.tabPageSkillTimer, frm);
-
-        }
-        public void SetAutoStatusEffectWindow()
-        {
-            StatusEffectForm form = new StatusEffectForm(subject);
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Location = new Point(50, 220);
-            form.MdiParent = this;
-            form.Show();
-        }
-
-        public void SetAHKWindow()
-        {
-            AHKForm frm = new AHKForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Location = new Point(0, 65);
-            frm.MdiParent = this;
-            frm.Show();
-            addform(this.tabPageSpammer, frm);
-        }
-
-        public void SetProfileWindow()
-        {
-            ProfileForm frm = new ProfileForm(this);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Location = new Point(0, 65);
-            frm.MdiParent = this;
-            frm.Show();
-            addform(this.tabPageProfiles, frm);
-        }
-
-        public void SetAutobuffStuffWindow()
-        {
-            StuffAutoBuffForm frm = new StuffAutoBuffForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Location = new Point(0, 65);
-            frm.MdiParent = this;
-            frm.Show();
-            addform(this.tabPageAutobuffStuff, frm);
-        }
-
-        public void SetAutobuffSkillWindow()
-        {
-            SkillAutoBuffForm frm = new SkillAutoBuffForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Location = new Point(0, 65);
-            frm.MdiParent = this;
-            addform(this.tabPageAutobuffSkill, frm);
-            frm.Show();
-        }
-
-        public void SetSongMacroWindow()
-        {
-            MacroSongForm frm = new MacroSongForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Location = new Point(0, 65);
-            frm.MdiParent = this;
-            addform(this.tabPageMacroSongs, frm);
-            frm.Show();
-        }
-
-        public void SetATKDEFWindow()
-        {
-            ATKDEFForm frm = new ATKDEFForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Location = new Point(0, 65);
-            frm.MdiParent = this;
-            addform(this.atkDef, frm);
-            frm.Show();
-        }
-
-        public void SetMacroSwitchWindow()
-        {
-            MacroSwitchForm frm = new MacroSwitchForm(subject);
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Location = new Point(0, 65);
-            frm.MdiParent = this;
-            addform(this.tabMacroSwitch, frm);
-            frm.Show();
+            TrackerSingleton.Instance().SendEvent("desktop_login", "page_view", "desktop_container_load");
         }
 
         public void addform(TabPage tp, Form f)
@@ -182,9 +77,11 @@ namespace _4RTools.Forms
 
         private void processCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Client client = new Client(this.processCB.SelectedItem.ToString());
+            int choosenPID = int.Parse(processCB.SelectedItem.ToString().Split(new string[] { " - " }, StringSplitOptions.None)[1]);
+            string clientChosen = "ArunafeltzRO.exe - " + choosenPID;
+            //this.processCB.SelectedItem.ToString()
+            Client client = new Client(clientChosen);
             ClientSingleton.Instance(client);
-            characterName.Text = client.ReadCharacterName();
             subject.Notify(new Utils.Message(Utils.MessageCode.PROCESS_CHANGED, null));
         }
 
@@ -218,7 +115,10 @@ namespace _4RTools.Forms
             {
                 if (p.MainWindowTitle != "" && ClientListSingleton.ExistsByProcessName(p.ProcessName))
                 {
-                    this.processCB.Items.Add(string.Format("{0}.exe - {1}", p.ProcessName, p.Id));
+                    Client client = new Client(string.Format("{0}.exe - {1}", p.ProcessName, p.Id));
+                    string nam = client.ReadCharacterName();
+                    //this.processCB.Items.Add(string.Format("{0}.exe - {1}", p.ProcessName, p.Id));
+                    this.processCB.Items.Add(nam + " - " + p.Id);
                 }
             }
         }
@@ -243,17 +143,17 @@ namespace _4RTools.Forms
 
         private void lblLinkGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(ConfigurationManager.AppSettings["GithubLink"]);
+            Process.Start(AppConfig.GithubLink);
         }
 
         private void lblLinkDiscord_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(ConfigurationManager.AppSettings["DiscordLink"]);
+            Process.Start(AppConfig.DiscordLink);
         }
 
         private void websiteLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(ConfigurationManager.AppSettings["4RToolsWebsite"]);
+            Process.Start(AppConfig.Website);
         }
 
         private void profileCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -265,24 +165,37 @@ namespace _4RTools.Forms
                     ProfileSingleton.Load(this.profileCB.Text); //LOAD PROFILE
                     subject.Notify(new Utils.Message(MessageCode.PROFILE_CHANGED, null));
                     currentProfile = this.profileCB.Text.ToString();
-                }catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.Error.WriteLine($"[ProfileSingleton.Load] Error Message: {ex.Message}");
+                    MessageBox.Show($"Error while loading the new profile. \nPlease get in touch via Discord. \nPlease send this error message to the admin: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
 
         public void Update(ISubject subject)
         {
             switch ((subject as Subject).Message.code)
             {
-                case MessageCode.TURN_ON: case MessageCode.PROFILE_CHANGED:
+                case MessageCode.PROCESS_CHANGED:
+                case MessageCode.PROFILE_CHANGED:
                     Client client = ClientSingleton.GetClient();
                     if (client != null)
-                    {
-                        characterName.Text = ClientSingleton.GetClient().ReadCharacterName();
-                    }
+                        this.characterName.Text = client.ReadCharacterName();
+                    break;
+                case MessageCode.TURN_OFF:
+                    this.profileCB.Enabled = true;
+                    this.processCB.Enabled = true;
+
+                    break;
+                case MessageCode.TURN_ON:
+                    this.profileCB.Enabled = false;
+                    this.processCB.Enabled = false;
+                    this.characterName.Text = ClientSingleton.GetClient().ReadCharacterName();
+                    break;
+                case MessageCode.SERVER_LIST_CHANGED:
+                    this.refreshProcessList();
                     break;
                 case MessageCode.CLICK_ICON_TRAY:
                     this.Show();
@@ -297,6 +210,189 @@ namespace _4RTools.Forms
         private void containerResize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized) { this.Hide(); }
+        }
+
+        #region Frames
+
+        public void SetToggleApplicationStateWindow()
+        {
+            ToggleApplicationStateForm frm = new ToggleApplicationStateForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.MdiParent = this;
+            this.OnOffPanel.Controls.Add(frm);
+            frm.Show();
+        }
+
+        public void SetAutopotWindow()
+        {
+            AutopotForm frm = new AutopotForm(subject, false);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.MdiParent = this;
+            frm.Show();
+            addform(this.tabPageAutopot, frm);
+        }
+
+        public void SetBoxWindow()
+        {
+            AutoBoxForm frm = new AutoBoxForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.MdiParent = this;
+            frm.Show();
+            addform(this.tabPageBox, frm);
+        }
+        public void SetAutopotYggWindow()
+        {
+            AutopotForm frm = new AutopotForm(subject, true);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.MdiParent = this;
+            frm.Show();
+            addform(this.tabPageYggAutopot, frm);
+        }
+
+        //KV
+        public void SetSkillTimerWindow()
+        {
+            SkillTimerForm frm = new SkillTimerForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.MdiParent = this;
+            frm.Show();
+            addform(this.tabSkillTimer, frm);
+        }
+
+        public void SetProfileWindow()
+        {
+            ProfileForm frm = new ProfileForm(this);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Location = new Point(0, 65);
+            frm.MdiParent = this;
+            frm.Show();
+            addform(this.tabPageProfiles, frm);
+        }
+
+        public void SetServerWindow()
+        {
+            //ServersForm frm = new ServersForm(subject);
+            //frm.FormBorderStyle = FormBorderStyle.None;
+            //frm.Location = new Point(0, 65);
+            //frm.MdiParent = this;
+            //frm.Show();
+            //addform(this.tabPageServer, frm);
+        }
+
+        public void SetAHKWindow()
+        {
+            AHKForm frm = new AHKForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Location = new Point(0, 65);
+            frm.MdiParent = this;
+            frm.Show();
+            addform(this.tabPageSpammer, frm);
+        }
+
+        public void SetAutobuffSkillWindow()
+        {
+            SkillAutoBuffForm frm = new SkillAutoBuffForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Location = new Point(0, 65);
+            frm.MdiParent = this;
+            addform(this.tabPageAutobuffSkill, frm);
+            frm.Show();
+        }
+
+        public void SetAutobuffStuffWindow()
+        {
+            StuffAutoBuffForm frm = new StuffAutoBuffForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Location = new Point(0, 65);
+            frm.MdiParent = this;
+            frm.Show();
+            addform(this.tabPageAutobuffStuff, frm);
+        }
+
+        public void SetDebuffRecoveryWindow()
+        {
+            DebuffRecoveryForm frm = new DebuffRecoveryForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Location = new Point(0, 65);
+            frm.MdiParent = this;
+            frm.Show();
+            addform(this.tabDebuffRecovery, frm);
+        }
+
+        public void SetSongMacroWindow()
+        {
+            //MacroSongForm frm = new MacroSongForm(subject);
+            //frm.FormBorderStyle = FormBorderStyle.None;
+            //frm.Location = new Point(0, 65);
+            //frm.MdiParent = this;
+            //addform(this.tabPageMacroSongs, frm);
+            //frm.Show();
+        }
+
+        public void SetATKDEFWindow()
+        {
+            ATKDEFForm frm = new ATKDEFForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Location = new Point(0, 65);
+            frm.MdiParent = this;
+            addform(this.tabAtxXDef, frm);
+            frm.Show();
+        }
+
+        public void SetMacroSwitchWindow()
+        {
+            MacroSwitchForm frm = new MacroSwitchForm(subject);
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Location = new Point(0, 65);
+            frm.MdiParent = this;
+            addform(this.tabMacroSwitch, frm);
+            frm.Show();
+        }
+        #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://arunafeltz.net/");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.com/invite/SpwXenczrh");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://web.facebook.com/groups/2776338365923146");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://arunafeltz.net/wiki/index.php/Main_Page");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spBoxKey_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

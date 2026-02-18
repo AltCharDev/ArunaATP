@@ -9,13 +9,27 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>_4RTools</RootNamespace>
     <AssemblyName>4RTools</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -216,6 +230,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AddServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddServerForm.Designer.cs">
+      <DependentUpon>AddServerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AHKForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +247,12 @@
     </Compile>
     <Compile Include="Forms\ATKDEFForm.Designer.cs">
       <DependentUpon>ATKDEFForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AutoBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AutoBoxForm.Designer.cs">
+      <DependentUpon>AutoBoxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AutoPatcher.cs">
       <SubType>Form</SubType>
@@ -240,6 +266,12 @@
     <Compile Include="Forms\ClientUpdaterForm.Designer.cs">
       <DependentUpon>ClientUpdaterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditProfileName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditProfileName.Designer.cs">
+      <DependentUpon>EditProfileName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MacroSongForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +283,12 @@
     </Compile>
     <Compile Include="Forms\MacroSwitchForm.Designer.cs">
       <DependentUpon>MacroSwitchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServersForm.Designer.cs">
+      <DependentUpon>ServersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SkillAutoBuffForm.cs">
       <SubType>Form</SubType>
@@ -270,11 +308,11 @@
     <Compile Include="Forms\StuffAutoBuffForm.Designer.cs">
       <DependentUpon>StuffAutoBuffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StatusEffectForm.cs">
+    <Compile Include="Forms\DebuffRecoveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StatusEffectForm.Designer.cs">
-      <DependentUpon>StatusEffectForm.cs</DependentUpon>
+    <Compile Include="Forms\DebuffRecoveryForm.Designer.cs">
+      <DependentUpon>DebuffRecoveryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Container.cs">
       <SubType>Form</SubType>
@@ -294,15 +332,23 @@
     <Compile Include="Forms\ToggleApplicationStateForm.Designer.cs">
       <DependentUpon>ToggleApplicationStateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Advertiser.cs" />
     <Compile Include="Model\AHK.cs" />
     <Compile Include="Model\ATKDEFMode.cs" />
+    <Compile Include="Model\OpenBox.cs" />
     <Compile Include="Model\Autopot.cs" />
     <Compile Include="Model\Autobuff.cs" />
     <Compile Include="Model\AutoRefreshSpammer.cs" />
     <Compile Include="Model\Buff.cs" />
     <Compile Include="Model\BuffContainer.cs" />
     <Compile Include="Model\BuffRenderer.cs" />
+    <Compile Include="Model\RevampedDebuffRenderer.cs" />
+    <Compile Include="Model\RevampedItemRenderer.cs" />
+    <Compile Include="Model\RevampedBuffRenderer.cs" />
+    <Compile Include="Model\DebuffsRecovery.cs" />
+    <Compile Include="Model\LocalServerManager.cs" />
     <Compile Include="Model\StatusRecovery.cs" />
+    <Compile Include="Model\Tracker.cs" />
     <Compile Include="Model\UserPreferences.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Action.cs" />
@@ -332,6 +378,7 @@
       <DependentUpon>Icons.resx</DependentUpon>
     </Compile>
     <Compile Include="Utils\EffectStatusIDs.cs" />
+    <Compile Include="Utils\AppConfig.cs" />
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="Utils\FormUtils.cs" />
     <Compile Include="Utils\Interop.cs" />
@@ -339,11 +386,17 @@
     <Compile Include="Utils\ProcessMemoryReader.cs" />
     <Compile Include="Utils\RObserver.cs" />
     <Compile Include="Utils\_4RThread.cs" />
+    <EmbeddedResource Include="Forms\AddServerForm.resx">
+      <DependentUpon>AddServerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AHKForm.resx">
       <DependentUpon>AHKForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ATKDEFForm.resx">
       <DependentUpon>ATKDEFForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AutoBoxForm.resx">
+      <DependentUpon>AutoBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AutoPatcher.resx">
       <DependentUpon>AutoPatcher.cs</DependentUpon>
@@ -351,11 +404,17 @@
     <EmbeddedResource Include="Forms\ClientUpdaterForm.resx">
       <DependentUpon>ClientUpdaterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditProfileName.resx">
+      <DependentUpon>EditProfileName.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MacroSongForm.resx">
       <DependentUpon>MacroSongForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MacroSwitchForm.resx">
       <DependentUpon>MacroSwitchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServersForm.resx">
+      <DependentUpon>ServersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SkillAutoBuffForm.resx">
       <DependentUpon>SkillAutoBuffForm.cs</DependentUpon>
@@ -372,12 +431,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Container.resx">
       <DependentUpon>Container.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StatusEffectForm.resx">
-      <DependentUpon>StatusEffectForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DebuffRecoveryForm.resx">
+      <DependentUpon>DebuffRecoveryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ToggleApplicationStateForm.resx">
       <DependentUpon>ToggleApplicationStateForm.cs</DependentUpon>
@@ -390,6 +450,7 @@
     <EmbeddedResource Include="Resources\4RTools\Icons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\4RTools\ETCResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -397,6 +458,7 @@
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\_4RTools.Model.ClientDTO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -557,9 +619,142 @@
     <None Include="assets\images\cart_boost.png" />
     <None Include="assets\images\weapon_blocking.png" />
     <None Include="assets\images\friggs_song.png" />
+    <None Include="assets\images\sl_soullinker.gif" />
+    <None Include="assets\images\gn_cartboost.png" />
+    <None Include="assets\images\mob_transform.png" />
+    <None Include="assets\images\researchreport.png" />
+    <None Include="assets\images\madnesscancel.gif" />
+    <None Include="assets\images\adjustment.gif" />
+    <None Include="assets\images\increase_accuracy.png" />
+    <None Include="assets\images\telecinese.png" />
+    <None Include="assets\images\amplify.png" />
+    <None Include="assets\images\recognized_spell.png" />
+    <None Include="assets\images\assumptio.png" />
+    <None Include="assets\images\energetic_drink.png" />
+    <None Include="assets\images\tumbling.png" />
+    <None Include="assets\images\izayoi.png" />
+    <None Include="assets\etc\shift.png" />
+    <None Include="assets\etc\up-and-down-arrow.png" />
+    <None Include="assets\images\mega_resist_potion.gif" />
+    <None Include="assets\images\swing_k.png" />
+    <None Include="assets\images\mana_plus.png" />
+    <None Include="assets\etc\flags\flag_br.png" />
+    <None Include="assets\images\fury.png" />
+    <None Include="assets\images\blessing_of_tyr.png" />
+    <None Include="assets\images\cash_food.gif" />
+    <None Include="assets\images\impositio_manus.png" />
+    <None Include="assets\images\servant_weapon.png" />
+    <None Include="assets\images\reflect_damage.png" />
+    <None Include="assets\images\debuffs\bleeding.png" />
+    <None Include="assets\images\debuffs\chaos.png" />
+    <None Include="assets\images\debuffs\critical_wound.png" />
+    <None Include="assets\images\debuffs\curse.png" />
+    <None Include="assets\images\debuffs\decrease_agi.png" />
+    <None Include="assets\images\debuffs\deep_sleep.png" />
+    <None Include="assets\images\debuffs\freezing.png" />
+    <None Include="assets\images\debuffs\poison_status.png" />
+    <None Include="assets\images\debuffs\silence.png" />
+    <None Include="assets\images\debuffs\stun.png" />
+    <None Include="assets\images\debuffs\water_of_lucky.gif" />
+    <None Include="assets\images\new.png" />
+    <None Include="assets\images\scrolls\burnt_incense.png" />
+    <None Include="assets\images\scrolls\eden_scroll.png" />
+    <None Include="assets\images\scrolls\holy_armor.png" />
+    <None Include="assets\images\scrolls\shadow_armor_scroll.png" />
+    <None Include="assets\images\scrolls\soul_scroll.png" />
+    <None Include="assets\images\scrolls\undead_element_scroll.png" />
+    <None Include="assets\images\ads_placeholder_clean.jpg" />
+    <None Include="assets\images\arrow-right-2.png" />
+    <None Include="assets\images\arrow-right-3.png" />
+    <None Include="assets\images\arrow-right-4.png" />
+    <None Include="assets\images\belt.gif" />
+    <None Include="assets\images\bleeding.png" />
+    <None Include="assets\images\breaking_limit.png" />
+    <None Include="assets\images\chaos.png" />
+    <None Include="assets\images\combo-tools.png" />
+    <None Include="assets\images\crazy_uproar.png" />
+    <None Include="assets\images\critical_wound.png" />
+    <None Include="assets\images\curse.png" />
+    <None Include="assets\images\decrease_agi.png" />
+    <None Include="assets\images\deep_sleep.png" />
+    <None Include="assets\images\ele_ghost_converter.png" />
+    <None Include="assets\images\ele_holy_converter.png" />
+    <None Include="assets\images\elvira_candy.png" />
+    <None Include="assets\images\enchanting_sky.png" />
+    <None Include="assets\images\equip1.png" />
+    <None Include="assets\images\equip2.png" />
+    <None Include="assets\images\equip3.png" />
+    <None Include="assets\images\equip4.png" />
+    <None Include="assets\images\equip5.png" />
+    <None Include="assets\images\equip6.png" />
+    <None Include="assets\images\equip7.png" />
+    <None Include="assets\images\equip8.png" />
+    <None Include="assets\images\fear_breeze.png" />
+    <None Include="assets\images\freezing.png" />
+    <None Include="assets\images\frost_giant_blood.gif" />
+    <None Include="assets\images\giant_growth.png" />
+    <None Include="assets\images\glittering.gif" />
+    <None Include="assets\images\golem_stone.gif" />
+    <None Include="assets\images\guarana_candy.png" />
+    <None Include="assets\images\helm.gif" />
+    <None Include="assets\images\infinity_drink.png" />
+    <None Include="assets\images\jaguar_hat.png" />
+    <None Include="assets\images\logo-4rtools.png" />
+    <None Include="assets\images\magic_candy.png" />
+    <None Include="assets\images\offertorium.png" />
+    <None Include="assets\images\pocao_fantastica.png" />
+    <None Include="assets\images\poison.png" />
+    <None Include="assets\images\poison_status.png" />
+    <None Include="assets\images\ragnarok-icon.png" />
+    <None Include="assets\images\red_booster.gif" />
+    <None Include="assets\images\red_booster.png" />
+    <None Include="assets\images\romantic_flower.gif" />
+    <None Include="assets\images\rule_break.png" />
+    <None Include="assets\images\silence.png" />
+    <None Include="assets\images\sitting.png" />
+    <None Include="assets\images\stun.png" />
+    <None Include="assets\images\sunglasses.gif" />
+    <None Include="assets\images\true_limit_power_booster.png" />
+    <None Include="assets\images\violin.gif" />
+    <None Include="assets\images\third_and_fourth_class\climax.png" />
+    <None Include="assets\images\third_and_fourth_class\universal_stance.png" />
+    <None Include="assets\images\pyroclastic.png" />
+    <None Include="assets\images\homun_last.png" />
+    <None Include="assets\images\third_and_fourth_class\swing_dance.png" />
+    <None Include="assets\images\third_and_fourth_class\exceed_break.png" />
+    <None Include="assets\images\PROPERTY_FIRE.png" />
+    <None Include="assets\images\PROPERTY_GROUND.png" />
+    <None Include="assets\images\PROPERTY_WATER.png" />
+    <None Include="assets\images\PROPERTY_WIND.png" />
+    <None Include="assets\images\foods\banquete.png" />
+    <None Include="assets\images\one_hand_quicken.png" />
+    <None Include="assets\images\skills_tk\SG_MOON_COMFORT.png" />
+    <None Include="assets\images\skills_tk\SG_MOON_WARM.png" />
+    <None Include="assets\images\skills_tk\SG_STAR_COMFORT.png" />
+    <None Include="assets\images\skills_tk\SG_STAR_WARM.png" />
+    <None Include="assets\images\skills_tk\SG_SUN_COMFORT.png" />
+    <None Include="assets\images\skills_tk\SG_SUN_WARM.png" />
+    <None Include="assets\images\third_and_fourth_class\third_exorcism_flame.png" />
+    <None Include="assets\images\third_and_fourth_class\second_judgement.png" />
+    <None Include="assets\images\third_and_fourth_class\first_faith_power.png" />
+    <Content Include="assets\images\debuffs\strip_armor.png" />
+    <Content Include="assets\images\debuffs\strip_helm.png" />
+    <Content Include="assets\images\debuffs\strip_shield.png" />
+    <Content Include="assets\images\debuffs\strip_weapon.png" />
     <Content Include="logo-4rtools.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.6.5.5\build\Fody.targets" Condition="Exists('packages\Fody.6.5.5\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

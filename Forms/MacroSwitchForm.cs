@@ -5,12 +5,14 @@ using System.Collections.Generic;
 using _4RTools.Model;
 using _4RTools.Utils;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace _4RTools.Forms
 {
     public partial class MacroSwitchForm : Form, IObserver
     {
-        public static int TOTAL_MACRO_LANES = 3;
+        public static int TOTAL_MACRO_LANES = 5;
         public MacroSwitchForm(Subject subject)
         {
             subject.Attach(this);
@@ -58,13 +60,22 @@ namespace _4RTools.Forms
                         NumericUpDown delayInput = (NumericUpDown)d[0];
                         delayInput.Value = chainConfig.macroEntries[cbName].delay;
                     }
+
+                    Control[] c = group.Controls.Find($"{cbName}click", true); // Clicks
+                    if (d.Length > 0)
+                    {
+                        CheckBox checkInput = (CheckBox)c[0];
+                        checkInput.Checked = chainConfig.macroEntries[cbName].hasClick;
+                    }
+
+
                 }
             }
             catch { };
         }
 
         private void onTextChange(object sender, EventArgs e)
-        {                 
+        {
             TextBox textBox = (TextBox)sender;
             int chainID = Int16.Parse(textBox.Parent.Name.Split(new[] { "chainGroup" }, StringSplitOptions.None)[1]);
             GroupBox group = (GroupBox)this.Controls.Find("chainGroup" + chainID, true)[0];
@@ -80,6 +91,7 @@ namespace _4RTools.Forms
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().MacroSwitch);
         }
 
+
         private void onDelayChange(object sender, EventArgs e)
         {
             NumericUpDown delayInput = (NumericUpDown)sender;
@@ -89,6 +101,17 @@ namespace _4RTools.Forms
             String cbName = delayInput.Name.Split(new[] { "delay" }, StringSplitOptions.None)[0];
             chainConfig.macroEntries[cbName].delay = decimal.ToInt16(delayInput.Value);
 
+            ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().MacroSwitch);
+        }
+
+        private void onCheckClickChange(object sender, EventArgs e)
+        {
+            CheckBox checkInput = (CheckBox)sender;
+            int chainID = Int16.Parse(checkInput.Parent.Name.Split(new[] { "chainGroup" }, StringSplitOptions.None)[1]);
+            ChainConfig chainConfig = ProfileSingleton.GetCurrent().MacroSwitch.chainConfigs.Find(config => config.id == chainID);
+
+            String cbName = checkInput.Name.Split(new[] { "click" }, StringSplitOptions.None)[0];
+            chainConfig.macroEntries[cbName].hasClick = checkInput.Checked;
             ProfileSingleton.SetConfiguration(ProfileSingleton.GetCurrent().MacroSwitch);
         }
 
@@ -115,6 +138,13 @@ namespace _4RTools.Forms
                 GroupBox p = (GroupBox)this.Controls.Find("chainGroup" + id, true)[0];
                 foreach (Control control in p.Controls)
                 {
+                    ChainConfig chainConfig = ProfileSingleton.GetCurrent().MacroSwitch.chainConfigs.Find(config => config.id == id);
+
+                    if (chainConfig == null) {
+                        chainConfig = new ChainConfig(id, Key.None);
+                        ProfileSingleton.GetCurrent().MacroSwitch.chainConfigs.Add(chainConfig);
+                    }
+
                     if (control is TextBox)
                     {
                         TextBox textBox = (TextBox)control;
@@ -127,6 +157,13 @@ namespace _4RTools.Forms
                     {
                         NumericUpDown delayInput = (NumericUpDown)control;
                         delayInput.ValueChanged += new System.EventHandler(this.onDelayChange);
+                    }
+
+
+                    if (control is CheckBox)
+                    {
+                        CheckBox checkInput = (CheckBox)control;
+                        checkInput.CheckedChanged += new System.EventHandler(this.onCheckClickChange);
                     }
                 }
             }
